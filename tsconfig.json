@@ -1,16 +1,21 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "strict": true,
+    "strictNullChecks": true,
+    "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./*"
-      ]
+      "@app/*": ["app/*"],
+      "@api/*": ["app/api/*"],
+      "@components/*": ["app/components/*"],
+      "@components/atom/*": ["app/components/atom/*"],
+      "@components/molecules/*": ["app/components/molecules/*"],
+      "@components/organisms/*": ["app/components/organisms/*"],
+      "@helpers/*": ["app/helpers/*"],
+      "@hooks/*": ["app/hooks/*"],
+      "@navigation/*": ["app/navigation/*"],
+      "@screens/*": ["app/screens/*"],
+      "@store/*": ["app/store/*"]
     }
   },
-  "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    "index.js"
-  ]
+  "exclude": ["node_modules", "babel.config.js"]
 }
