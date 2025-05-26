@@ -100,7 +100,7 @@ In this section, we'll set up some essential development tools, configure custom
 
 Start by installing the required development packages. Run the following command in the root of your project:
 
-```groovy
+```bash
 yarn add -D babel-plugin-module-resolver eslint-config-prettier prettier @react-native/eslint-config metro-react-native-babel-preset
 ```
 
@@ -112,7 +112,7 @@ We'll now switch from `expo-router` to [`React Navigation`](https://reactnavigat
 
 ### Step 1: Remove `expo-router`
 
-```groovy
+```bash
 yarn remove expo-router
 ```
 
@@ -209,7 +209,7 @@ Start by defining your custom aliases under the `compilerOptions` section. Based
 
 Next, configure Babel to recognize the same aliases at runtime by using the `module-resolver` plugin:
 
-```jsx
+```js
 module.exports = {
   presets: ["babel-preset-expo"], // or 'module:metro-react-native-babel-preset'
   plugins: [
